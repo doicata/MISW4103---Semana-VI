@@ -1,7 +1,7 @@
 Feature: Ghost
 
 @user1 @web
-Scenario: E0001 - Crear un post con titulo
+Scenario: E0003 - Editar el titulo de un post previamente creado
   Given I navigate to page principal BS
   And I enter email y password BS
   And I wait for 1 seconds
@@ -12,7 +12,16 @@ Scenario: E0001 - Crear un post con titulo
   And Titulo del post BS
   And Clic en Contenido post BS
   And I wait for 1 seconds
+  And Contenido del post BS
   And Clic en el boton Publish Post BS
   And Clic en el boton publish final BS
+  And Clic para devolverse a los posts BS
+  And Entro al post creado BS
+  And Edito el titulo del post BS
+  And Contenido del post BS
+  And I wait for 1 seconds
+  And Clic en boton de Update del post BS
+  And Clic en boton Update del post final BS
+  And I wait for 1 seconds
   When Clic para devolverse a los posts BS
-  Then Valida Post publicado en la lista de posts BS
+  Then Valida titulo del Post editado en la lista de posts BS
